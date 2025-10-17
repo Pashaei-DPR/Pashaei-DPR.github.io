@@ -5,6 +5,7 @@
   <meta name="description" content="Résumé of Mohammad Pashaei – Sport Engineering MSc, Reinforcement Learning, Medical Image Processing, and AI in Fault Diagnosing.">
   <title>Mohammad Pashaei Résumé</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Vazirmatn', sans-serif;
@@ -16,13 +17,35 @@
       padding: 0;
     }
 
+    .lang-switch {
+      margin: 1em;
+    }
+
+    .lang-switch button {
+      font-size: 0.9em;
+      margin: 0 5px;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #0055aa;
+      color: white;
+    }
+
+    .lang-switch button:hover {
+      background: #0077cc;
+    }
+
     .card {
       background: white;
       max-width: 600px;
-      margin: 60px auto;
+      margin: 50px auto;
       padding: 2em;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column; /* ✅ این باعث می‌شود عکس بالا و بقیه پایین بیایند */
+      align-items: center; /* ✅ وسط‌چین عمودی */
     }
 
     .profile-pic {
@@ -32,15 +55,12 @@
       object-fit: cover;
       margin-bottom: 1em;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    h1 { 
+    h1 {
       color: #0055aa;
       margin-top: 0.5em;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.5em;
     }
 
     a {
@@ -48,34 +68,55 @@
       text-decoration: none;
     }
 
-    a.button {
-      display: inline-block;
-      padding: 0.6em 1.2em;
-      background: #0055aa;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1em;
-    }
-
-    a.button:hover {
-      background: #0077cc;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+  <div class="lang-switch">
+    <button id="fa-btn">🇮🇷 فارسی</button>
+    <button id="en-btn">🇬🇧 English</button>
+  </div>
+
   <div class="card">
     <img src="profile.jpg" alt="Mohammad Pashaei" class="profile-pic">
 
-    <h1>محمد پاشایی</h1>
-    <p><strong>کارشناسی ارشد:</strong> مهندسی ورزش – یادگیری تقویتی در استراتژی بازی، پردازش تصویر پزشکی</p>
-    <p><strong>کارشناسی:</strong> مهندسی مکانیک – هوش مصنوعی در عیب‌یابی، پردازش سیگنال صوت و ارتعاش</p>
+    <div id="content-fa">
+      <h1>محمد پاشایی</h1>
+      <p><strong>کارشناسی ارشد:</strong> مهندسی ورزش – یادگیری تقویتی در استراتژی بازی، پردازش تصویر پزشکی</p>
+      <p><strong>کارشناسی:</strong> مهندسی مکانیک – هوش مصنوعی در عیب‌یابی، پردازش سیگنال صوت و ارتعاش</p>
+      <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
+      <p>🔗 <a href="https://github.com/Pashaei-DPR">گیت‌هاب</a></p>
+    </div>
 
-    <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
-    <p>🔗 <a href="https://github.com/Pashaei-DPR">GitHub</a></p>
-
-    <p><a href="resume.html" class="button">مشاهده رزومه کامل</a></p>
+    <div id="content-en" style="display: none;">
+      <h1>Mohammad Pashaei</h1>
+      <p><strong>MSc:</strong> Sport Engineering – Reinforcement Learning in Game Strategy, Medical Image Processing</p>
+      <p><strong>BSc:</strong> Mechanical Engineering – AI in Fault Diagnosing, Audio and Vibration Signal Processing</p>
+      <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
+      <p>🔗 <a href="https://github.com/Pashaei-DPR">GitHub</a></p>
+    </div>
   </div>
+
+  <script>
+    const faBtn = document.getElementById("fa-btn");
+    const enBtn = document.getElementById("en-btn");
+    const faContent = document.getElementById("content-fa");
+    const enContent = document.getElementById("content-en");
+
+    faBtn.addEventListener("click", () => {
+      faContent.style.display = "block";
+      enContent.style.display = "none";
+      document.body.style.direction = "rtl";
+    });
+
+    enBtn.addEventListener("click", () => {
+      faContent.style.display = "none";
+      enContent.style.display = "block";
+      document.body.style.direction = "ltr";
+    });
+  </script>
 </body>
 </html>
