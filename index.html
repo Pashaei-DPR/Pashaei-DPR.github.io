@@ -1,77 +1,38 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
-  <!-- توضیحات برای موتورهای جست‌وجو و شبکه‌های اجتماعی -->
-  <meta name="description" content="Résumé of Mohammad Pashaei – Sport Engineering MSc, Reinforcement Learning, Medical Image Processing, and AI in Fault Diagnosing.">
-
-
-  
-<style>
-  body {
-    font-family: 'Vazirmatn', sans-serif;
-    text-align: center;
-    direction: rtl;
-    background: #fafafa;
-    color: #222;
-  }
-  .card {
-    background: white;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 2em;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  h1 { color: #0055aa; }
-  a { color: #0077cc; text-decoration: none; }
-</style>
-
-
-
-  
-
   <meta charset="UTF-8">
+  <meta name="description" content="Résumé of Mohammad Pashaei – Sport Engineering MSc, Reinforcement Learning, Medical Image Processing, and AI in Fault Diagnosing.">
   <title>Mohammad Pashaei Résumé</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; direction: rtl; background: #fafafa; color: #222; }
-    .card { background: white; max-width: 600px; margin: 50px auto; padding: 2em; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { color: #0055aa; }
-    a { color: #0077cc; text-decoration: none; }
-    
-    .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-  
-
 <body>
-  <main class="card">
+  <div class="lang-switch">
+    <button id="fa-btn">🇮🇷 فارسی</button>
+    <button id="en-btn">🇬🇧 English</button>
+  </div>
+
+  <div class="card">
     <img src="profile.jpg" alt="Mohammad Pashaei" class="profile-pic">
-    <h1>Mohammad Pashaei</h1>
-    <!-- Education -->
-    <section>
+
+    <div id="content-fa">
+      <h1>محمد پاشایی</h1>
+      <p><strong>کارشناسی ارشد:</strong> مهندسی ورزش – یادگیری تقویتی در استراتژی بازی، پردازش تصویر پزشکی</p>
+      <p><strong>کارشناسی:</strong> مهندسی مکانیک – هوش مصنوعی در عیب‌یابی، پردازش سیگنال صوت و ارتعاش</p>
+      <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
+      <p>🔗 <a href="https://github.com/Pashaei-DPR">گیت‌هاب</a></p>
+    </div>
+
+    <div id="content-en" style="display: none;">
+      <h1>Mohammad Pashaei</h1>
       <p><strong>MSc:</strong> Sport Engineering – Reinforcement Learning in Game Strategy, Medical Image Processing</p>
       <p><strong>BSc:</strong> Mechanical Engineering – AI in Fault Diagnosing, Audio and Vibration Signal Processing</p>
-    </section>
-
-    <!-- Contact -->
-    <section>
       <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
       <p>🔗 <a href="https://github.com/Pashaei-DPR">GitHub</a></p>
-    </section>
-  </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
-
-
-  
 </html>
