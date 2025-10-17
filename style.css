@@ -1,0 +1,50 @@
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background: #fafafa;
+  text-align: center;
+  direction: rtl;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.lang-switch {
+  margin: 1em;
+}
+
+.lang-switch button {
+  font-size: 0.9em;
+  margin: 0 5px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0055aa;
+  color: white;
+}
+
+.lang-switch button:hover {
+  background: #0077cc;
+}
+
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  flex-direction: row-reverse;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
