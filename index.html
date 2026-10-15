@@ -1,139 +1,222 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Résumé of Mohammad Pashaei – Sport Engineering MSc, Reinforcement Learning, Medical Image Processing, and AI in Fault Diagnosing.">
-  <title>Mohammad Pashaei Résumé</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Pashaei - Portfolio</title>
+    
+    <!-- Tab Logo (Favicon) -->
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --link-color: #0366d6;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
 
-  <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: #fafafa;
-      text-align: center;
-      direction: rtl;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+        }
 
-    .lang-switch {
-      margin: 1em;
-    }
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-    .lang-switch button {
-      font-size: 0.9em;
-      margin: 0 5px;
-      padding: 0.5em 1em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background: #0055aa;
-      color: white;
-    }
+        /* Sidebar Styling */
+        .sidebar {
+            flex: 1;
+            max-width: 300px;
+            background-color: #f1f4f8;
+            padding: 40px 30px;
+            text-align: center;
+            border-right: 1px solid #eaecef;
+        }
 
-    .lang-switch button:hover {
-      background: #0077cc;
-    }
+        .top-logo {
+            width: 60px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
 
-    .card {
-      background: white;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column; /* ✅ این باعث می‌شود عکس بالا و بقیه پایین بیایند */
-      align-items: center; /* ✅ وسط‌چین عمودی */
-    }
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    }
+        .sidebar h1 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: var(--primary-color);
+        }
 
-    h1 {
-      color: #0055aa;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-    }
+        .contact-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
 
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
+        .contact-links li {
+            margin-bottom: 10px;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .contact-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styling */
+        .content {
+            flex: 2;
+            padding: 40px 50px;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .content h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 20px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .content li {
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            .sidebar {
+                max-width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eaecef;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="lang-switch">
-    <button id="fa-btn">🇮🇷 فارسی</button>
-    <button id="en-btn">🇬🇧 English</button>
-  </div>
 
-  <div class="card">
-    <img src="profile.jpg" alt="Mohammad Pashaei" class="profile-pic">
+    <div class="container">
+        
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Top Logo -->
+            <img src="logo.jpg" alt="Site Logo" class="top-logo">
+            
+            <!-- Profile Photo -->
+            <img src="admin.jpg" alt="Mohammad Pashaei" class="profile-photo">
+            
+            <h1>Mohammad Pashaei</h1>
+            <p>M.Sc. in Sports Engineering<br>University of Tehran</p>
+            
+            <ul class="contact-links">
+            <li><a href="mailto:Mo.pashaei.xii@gmail.com">Mo.pashaei.xii@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/mohammad-pashaei-xii/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Pashaei-DPR" target="_blank">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?hl=en&user=jHeEncoAAAAJ" target="_blank">Google Scholar</a></li>
 
-    <div id="content-fa">
-      <h1>محمد پاشایی</h1>
-      <p><strong>کارشناسی ارشد:</strong> مهندسی ورزش – یادگیری تقویتی در استراتژی بازی، پردازش تصویر پزشکی</p>
-      <p><strong>کارشناسی:</strong> مهندسی مکانیک – هوش مصنوعی در عیب‌یابی، پردازش سیگنال صوت و ارتعاش</p>
-      <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
-      <p>🔗 <a href="https://github.com/Pashaei-DPR">گیت‌هاب</a></p>
+            </ul>
+        </aside>
 
-      <p>
-        <a href="Mohammad-Pashaei-Resume.pdf" class="button" target="_blank">
-          مشاهده رزومه کامل
-        </a>
-      </p>
+        <!-- Right Main Content -->
+        <main class="content">
+            
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a researcher focusing on Multi-Agent Reinforcement Learning, emergent coordination, complex adaptive systems, and RL for sequential decision-making in partially observable environments.</p>
+            </section>
 
-      
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>M.Sc. in Sports Engineering</strong>, University of Tehran (UT), Iran (2024-2026).
+                        <ul>
+                            <li>Thesis: Opponent Tactical Awareness in Multi-Agent Reinforcement Learning for Football.</li>
+                        </ul>
+                    </li>
+                    <li><strong>B.Sc. in Mechanical Engineering (Mechatronics)</strong>, Isfahan University of Technology (IUT), Iran (2018-2023).
+                        <ul>
+                            <li>Thesis: Audio-Based Fault Diagnosis of Ventilation Fans Using Machine Learning Algorithms.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><span class="project-title">Adaptive Automated Insulin Delivery (2026):</span> Built a robust adaptive PID controller (EKF + ADMM) and benchmarked it against RL controllers (PPO, PPO-PID), achieving top time-in-range and zero hypoglycemia in virtual T1D/T2D trials.</li>
+                    <li><span class="project-title">Multi-Objective Fuzzy C-Means Posture Classification (2026):</span> Used NSGA-II to optimize FCM thresholds, finding Pareto-optimal trade-offs between information preservation and cluster compactness.</li>
+                </ul>
+            </section>
+
+            <section id="ongoing-projects">
+                <h2>Ongoing Projects</h2>
+                <ul>
+                    <li><span class="project-title">Strategic Alignment & Reward Optimization in Multi-Agent Systems (2026):</span> Simulated multi-agent RL to study how cooperative behavior and effective rules emerge from environmental structure rather than top-down reward design.</li>
+                    <li><span class="project-title">MARL-Based Football Simulation Environment:</span> Developed a MARL-based football simulation environment to study opponent tactics, decentralized coordination, and emergent behavior.</li>
+                </ul>
+            </section>
+
+            <section id="Publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li>Pashaei, M., Tayebi, A., Amiri, H., & Fahim, A. (2025). Short-term gains vs. long-term success: Reward strategy design for reinforcement learning in football. <em>Proceedings of the 32nd National and 10th International Iranian Conference on Biomedical Engineering (ICBME)</em>, 1327-1331, IEEE. DOI: 10.1109/ICBME68496.2025.11392257.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:9yKSN-GCB0IC">link</a>
+                    <li>Pashaei, M., Forootan, E., Mahmoudi, S., Mazaheri, R., & Masoudi-Nejad, A. (2025). AXAN-Net: An adaptive exponential approximator neural network for latent feature composition with application in audio-based fan fault detection. <em>Proceedings of the 11th International Conference on Signal Processing and Intelligent Systems (ICSPIS)</em>, 474-479, IEEE. DOI: 10.1109/ICSPIS68676.2025.11551758.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:u5HHmVD_uO8C">link</a>
+                    <li>Pashaei, M., Aghdaei, A., & Khorramabadi Arani, M. (2024). Audio-based fault diagnosis of ventilation fans using machine learning algorithms. <em>Proceedings of the 14th International Conference on Acoustics and Vibration (ISAV)</em>.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:d1gkVwhDpl0C">link</a>
+                </ul>
+            </section>
+
+        </main>
     </div>
 
-    <div id="content-en" style="display: none;">
-      <h1>Mohammad Pashaei</h1>
-      <p><strong>MSc:</strong> Sport Engineering – Reinforcement Learning in Game Strategy, Medical Image Processing</p>
-      <p><strong>BSc:</strong> Mechanical Engineering – AI in Fault Diagnosing, Audio and Vibration Signal Processing</p>
-      <p>📧 <a href="mailto:m.Pashaei@ut.ac.ir">m.Pashaei@ut.ac.ir</a></p>
-      <p>🔗 <a href="https://github.com/Pashaei-DPR">GitHub</a></p>
-
-      <p>
-        <a href="Mohammad-Pashaei-Resume.pdf" class="button" target="_blank">
-          View Full Résumé
-        </a>
-      </p>
-
-
-      
-    </div>
-  </div>
-
-  <script>
-    const faBtn = document.getElementById("fa-btn");
-    const enBtn = document.getElementById("en-btn");
-    const faContent = document.getElementById("content-fa");
-    const enContent = document.getElementById("content-en");
-
-    faBtn.addEventListener("click", () => {
-      faContent.style.display = "block";
-      enContent.style.display = "none";
-      document.body.style.direction = "rtl";
-    });
-
-    enBtn.addEventListener("click", () => {
-      faContent.style.display = "none";
-      enContent.style.display = "block";
-      document.body.style.direction = "ltr";
-    });
-  </script>
 </body>
 </html>
