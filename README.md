@@ -8,7 +8,7 @@
 ```text
 Pashaei-dpr repo
 │
-├── logo.jpg
+├── white_logo.jpg
 ├── admin.jpg (profile photo)
 ├── CV_Mohammad_Pashaei.pdf
 └── index.html
@@ -17,4 +17,6 @@ Pashaei-dpr repo
     ├── Projects (ended)
     ├── Ongoing Projects
     ├── Publications
-    └── contact info (left col)
+    └── up middle col
+    └── Loud thinking about world and science
+
