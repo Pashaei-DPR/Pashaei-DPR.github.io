@@ -24,20 +24,33 @@
       line-height: 1.6;
     }
 
-    /* Top Header Section */
+    /* Header centered */
     .header {
       max-width: 900px;
       margin: 30px auto 20px auto;
       padding: 0 20px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column; /* stacks photo, name & logo vertically */
+      align-items: center;    /* centers everything in the middle */
+      justify-content: center;
+      gap: 15px;
     }
 
-    .brand {
+.brand {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 15px;
+    }
+
+    /* Circle profile image without border */
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: none;           /* no border */
+      object-fit: cover;
+      display: block;
     }
 
     /* Change logo size here if needed */
@@ -55,15 +68,6 @@
       color: #276d65;
     }
 
-    /* Circle profile image */
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 2px solid #000000;
-      object-fit: cover;
-      display: block;
-    }
 
     /* Teal Navigation Bar */
     .nav-bar {
@@ -137,17 +141,17 @@
 <body>
 
   <!-- 1. Header (Logo, Name, Photo) -->
+  <!-- 1. Header (Centered Photo, Logo & Name) -->
   <div class="header">
+    <!-- Centered photo (no border) -->
+    <img src="photo.jpg" alt="Mohammad Pasahei" class="profile-photo">
+
+    <!-- Centered Logo + Name -->
     <div class="brand">
-      <!-- REPLACE 'logo.png' with your logo image link or file name -->
-      <img src="white_logo.jpg" alt="Logo" class="logo-img">
+      <img src="logo.png" alt="Logo" class="logo-img">
       <h1 class="name-title">Mohammad Pasahei</h1>
     </div>
-
-    <!-- REPLACE 'photo.jpg' with your photo link or file name -->
-    <img src="admin.jpg" alt="Mohammad Pasahei" class="profile-photo">
   </div>
-
   <!-- 2. Navigation Bar (Replace href links with yours) -->
   <nav class="nav-bar">
     <div class="nav-container">
