@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad Pasahei</title>
+  <title>Mohammad Pashaei</title>
 
   <!-- Google Font matching your sketch handwriting style -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,39 +24,40 @@
       line-height: 1.6;
     }
 
-    /* Header centered */
+    /* Centered Header Section */
     .header {
       max-width: 900px;
-      margin: 30px auto 20px auto;
+      margin: 30px auto 25px auto;
       padding: 0 20px;
       display: flex;
-      flex-direction: column; /* stacks photo, name & logo vertically */
-      align-items: center;    /* centers everything in the middle */
+      flex-direction: column;
+      align-items: center;    /* Centers photo and name horizontally */
       justify-content: center;
       gap: 15px;
     }
 
-.brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    /* Circle profile image without border */
+    /* Circle profile photo - centered, no border */
     .profile-photo {
       width: 130px;
       height: 130px;
       border-radius: 50%;
-      border: none;           /* no border */
+      border: none;
       object-fit: cover;
       display: block;
     }
 
-    /* Change logo size here if needed */
+    /* Brand row: Logo to the left of the Name, centered */
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Logo size */
     .logo-img {
-      width: 55px;
-      height: 55px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
     }
 
@@ -67,7 +68,6 @@
       font-weight: 700;
       color: #276d65;
     }
-
 
     /* Teal Navigation Bar */
     .nav-bar {
@@ -140,23 +140,20 @@
 </head>
 <body>
 
-  <!-- 1. Header (Logo, Name, Photo) -->
-  <!-- 1. Header (Centered Photo, Logo & Name) -->
+  <!-- 1. Centered Header: Photo above, Logo to the left of the Name -->
   <div class="header">
-    <!-- Centered photo (no border) -->
-    <img src="photo.jpg" alt="Mohammad Pasahei" class="profile-photo">
+    <img src="photo.jpg" alt="Mohammad Pashaei" class="profile-photo">
 
-    <!-- Centered Logo + Name -->
     <div class="brand">
       <img src="logo.png" alt="Logo" class="logo-img">
-      <h1 class="name-title">Mohammad Pasahei</h1>
+      <h1 class="name-title">Mohammad Pashaei</h1>
     </div>
   </div>
-  <!-- 2. Navigation Bar (Replace href links with yours) -->
+
+  <!-- 2. Navigation Bar -->
   <nav class="nav-bar">
     <div class="nav-container">
       <a href="#">Loud Thinking</a>
-      <!-- DIRECT PDF LINK HERE -->
       <a href="CV_Mohammad_Pashaei.pdf" target="_blank">My CV</a>
       <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
       <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
@@ -165,7 +162,7 @@
     </div>
   </nav>
 
-  <!-- 3. Main Text Content with Simple '----' Separators -->
+  <!-- 3. Main Text Content with Simple Dashed Separators -->
   <main class="content">
 
     <!-- About me -->
