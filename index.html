@@ -1,223 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Pashaei - Portfolio</title>
-    
-    <!-- Tab Logo (Favicon) -->
-<link rel="icon" type="image/jpeg" href="logo.jpg">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --link-color: #0366d6;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Pasahei</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            display: flex;
-            justify-content: center;
-        }
+  <!-- Google Font matching your sketch handwriting style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
-        .container {
-            display: flex;
-            max-width: 1000px;
-            margin: 40px auto;
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Sidebar Styling */
-        .sidebar {
-            flex: 1;
-            max-width: 300px;
-            background-color: #f1f4f8;
-            padding: 40px 30px;
-            text-align: center;
-            border-right: 1px solid #eaecef;
-        }
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-        .top-logo {
-            width: 60px;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+    /* Top Header Section */
+    .header {
+      max-width: 900px;
+      margin: 30px auto 20px auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-        .sidebar h1 {
-            font-size: 1.5rem;
-            margin: 10px 0;
-            color: var(--primary-color);
-        }
+    /* Change logo size here if needed */
+    .logo-img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
 
-        .contact-links {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
+    .name-title {
+      font-size: 32px;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      color: #276d65;
+    }
 
-        .contact-links li {
-            margin-bottom: 10px;
-        }
+    /* Circle profile image */
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #000000;
+      object-fit: cover;
+      display: block;
+    }
 
-        .contact-links a {
-            color: var(--link-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    /* Teal Navigation Bar */
+    .nav-bar {
+      background-color: #236e69;
+      padding: 12px 20px;
+      width: 100%;
+    }
 
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
 
-        /* Main Content Styling */
-        .content {
-            flex: 2;
-            padding: 40px 50px;
-        }
+    .nav-container a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
 
-        .content h2 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid #eaecef;
-            padding-bottom: 10px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
+    .nav-container a:hover {
+      text-decoration: underline;
+    }
 
-        .content h3 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-top: 20px;
-        }
+    /* Content Area */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        .content ul {
-            padding-left: 20px;
-            margin-bottom: 30px;
-        }
+    /* Section Titles in Handwriting Font */
+    h2 {
+      font-family: 'Caveat', cursive;
+      font-size: 34px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 8px;
+    }
 
-        .content li {
-            margin-bottom: 15px;
-        }
+    /* Simple Dashed Separator */
+    .separator {
+      border: none;
+      border-top: 1.5px dashed #333333;
+      margin: 35px 0;
+    }
 
-        .project-title {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
+    p {
+      font-size: 16px;
+      color: #222222;
+      margin-bottom: 12px;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                margin: 0;
-                border-radius: 0;
-            }
-            .sidebar {
-                max-width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #eaecef;
-            }
-            .content {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <!-- Top Logo -->
-            <img src="logo.jpg" alt="Site Logo" class="top-logo">
-            
-            <!-- Profile Photo -->
-            <img src="admin.jpg" alt="Mohammad Pashaei" class="profile-photo">
-            
-            <h1>Mohammad Pashaei</h1>
-            <p>M.Sc. in Sports Engineering<br>University of Tehran</p>
-            
-            <ul class="contact-links">
-            <li><a href="mailto:Mo.pashaei.xii@gmail.com">Mo.pashaei.xii@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/mohammad-pashaei-xii/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/Pashaei-DPR" target="_blank">GitHub</a></li>
-            <li><a href="https://scholar.google.com/citations?hl=en&user=jHeEncoAAAAJ" target="_blank">Google Scholar</a></li>
-            <li><a href="CV_Mohammad_Pashaei.pdf" target="_blank">Download CV</a></li>
-
-            </ul>
-        </aside>
-
-        <!-- Right Main Content -->
-        <main class="content">
-            
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a researcher focusing on Multi-Agent Reinforcement Learning, emergent coordination, complex adaptive systems, and RL for sequential decision-making in partially observable environments.</p>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>M.Sc. in Sports Engineering</strong>, University of Tehran (UT), Iran (2024-2026).
-                        <ul>
-                            <li>Thesis: Opponent Tactical Awareness in Multi-Agent Reinforcement Learning for Football.</li>
-                        </ul>
-                    </li>
-                    <li><strong>B.Sc. in Mechanical Engineering (Mechatronics)</strong>, Isfahan University of Technology (IUT), Iran (2018-2023).
-                        <ul>
-                            <li>Thesis: Audio-Based Fault Diagnosis of Ventilation Fans Using Machine Learning Algorithms.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><span class="project-title">Adaptive Automated Insulin Delivery (2026):</span> Built a robust adaptive PID controller (EKF + ADMM) and benchmarked it against RL controllers (PPO, PPO-PID), achieving top time-in-range and zero hypoglycemia in virtual T1D/T2D trials.</li>
-                    <li><span class="project-title">Multi-Objective Fuzzy C-Means Posture Classification (2026):</span> Used NSGA-II to optimize FCM thresholds, finding Pareto-optimal trade-offs between information preservation and cluster compactness.</li>
-                </ul>
-            </section>
-
-            <section id="ongoing-projects">
-                <h2>Ongoing Projects</h2>
-                <ul>
-                    <li><span class="project-title">Strategic Alignment & Reward Optimization in Multi-Agent Systems (2026):</span> Simulated multi-agent RL to study how cooperative behavior and effective rules emerge from environmental structure rather than top-down reward design.</li>
-                    <li><span class="project-title">MARL-Based Football Simulation Environment:</span> Developed a MARL-based football simulation environment to study opponent tactics, decentralized coordination, and emergent behavior.</li>
-                </ul>
-            </section>
-
-            <section id="Publications">
-                <h2>Publications</h2>
-                <ul>
-                    <li>Pashaei, M., Tayebi, A., Amiri, H., & Fahim, A. (2025). Short-term gains vs. long-term success: Reward strategy design for reinforcement learning in football. <em>Proceedings of the 32nd National and 10th International Iranian Conference on Biomedical Engineering (ICBME)</em>, 1327-1331, IEEE. DOI: 10.1109/ICBME68496.2025.11392257.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:9yKSN-GCB0IC">link</a>
-                    <li>Pashaei, M., Forootan, E., Mahmoudi, S., Mazaheri, R., & Masoudi-Nejad, A. (2025). AXAN-Net: An adaptive exponential approximator neural network for latent feature composition with application in audio-based fan fault detection. <em>Proceedings of the 11th International Conference on Signal Processing and Intelligent Systems (ICSPIS)</em>, 474-479, IEEE. DOI: 10.1109/ICSPIS68676.2025.11551758.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:u5HHmVD_uO8C">link</a>
-                    <li>Pashaei, M., Aghdaei, A., & Khorramabadi Arani, M. (2024). Audio-based fault diagnosis of ventilation fans using machine learning algorithms. <em>Proceedings of the 14th International Conference on Acoustics and Vibration (ISAV)</em>.</li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=jHeEncoAAAAJ&citation_for_view=jHeEncoAAAAJ:d1gkVwhDpl0C">link</a>
-                </ul>
-            </section>
-
-        </main>
+  <!-- 1. Header (Logo, Name, Photo) -->
+  <div class="header">
+    <div class="brand">
+      <!-- REPLACE 'logo.png' with your logo image link or file name -->
+      <img src="white_logo.jpg" alt="Logo" class="logo-img">
+      <h1 class="name-title">Mohammad Pasahei</h1>
     </div>
+
+    <!-- REPLACE 'photo.jpg' with your photo link or file name -->
+    <img src="admin.jpg" alt="Mohammad Pasahei" class="profile-photo">
+  </div>
+
+  <!-- 2. Navigation Bar (Replace href links with yours) -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="#">Loud Thinking</a>
+      <!-- DIRECT PDF LINK HERE -->
+      <a href="my_cv.pdf" target="_blank">My CV</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=yourid" target="_blank">Google Scholar</a>
+      <a href="mailto:Mo.pashaei.xii@gmail.com">Mo.pashaei.xii@gmail.com</a>
+    </div>
+  </nav>
+
+  <!-- 3. Main Text Content with Simple '----' Separators -->
+  <main class="content">
+
+    <!-- About me -->
+    <section>
+      <h2>About me</h2>
+      <p>Write your introduction text here.</p>
+    </section>
+
+    <hr class="separator">
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <p>Write your project details here as plain text, or add list items:</p>
+      <ul>
+        <li><strong>Project One:</strong> Brief description of the project.</li>
+        <li><strong>Project Two:</strong> Brief description of the project.</li>
+      </ul>
+    </section>
+
+    <hr class="separator">
+
+    <!-- Ongoing Projects -->
+    <section>
+      <h2>Ongoing Projects</h2>
+      <p>Write your ongoing project text directly here:</p>
+      <ul>
+        <li><strong>Current Research:</strong> Brief description of ongoing work.</li>
+      </ul>
+    </section>
+
+    <hr class="separator">
+
+    <!-- Publications -->
+    <section>
+      <h2>Publications</h2>
+      <p>List your publications directly as text:</p>
+      <ul>
+        <li>[1] Author, A., "Paper Title", Conference/Journal name, 2025.</li>
+        <li>[2] Author, B., "Paper Title", Conference/Journal name, 2024.</li>
+      </ul>
+    </section>
+
+  </main>
 
 </body>
 </html>
